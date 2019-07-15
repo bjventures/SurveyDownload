@@ -1,0 +1,29 @@
+﻿name|PIEL Tutorial Sample
+author|PIEL Administration
+author-email|contact@contact.com
+subject-id|{participant id}
+can-run-once|1
+can-test|0
+exit-message|3|Thank you for testing the PIEL Survey.
+
+#The following lines are commented out since this is not a Scheduled Survey.
+#placeholder-message|No questions for now, thank you for checking!
+#alert-sound|005
+#max-duration|600
+#max-delay|180
+#run|7|1915,1920,1925
+#run|1|0900-1200,1500,1700-1900
+#run|2,3,4|1300-1600
+#run-for|7
+
+#Below are the questions. Integers indicate the question number
+1|How did you hear about the PIEL Survey?|From a colleague %NEXT 3|Internet Search %NEXT 3|Advertisment %NEXT 3|Reading a review/blog %NEXT 3|In the Apple Store|Other
+2|Please provide details of where you heard about the PIEL Survey. %TYPE text
+3|What was your experience of using the PIEL Survey? %TYPE slider|Difficult|Easy
+4|What features do you most like about the PIEL Survey? (you can choose more than one). %TYPE checkbox|Ease of use|Accessibility|It's quick|It's intuitive|It's on my iDevice|Other
+5|How many times have you used the PIEL Survey? %TYPE list|First time|2-5 times|6-10 times|More than 10 times
+6|Did you use our website before using this PIEL Survey? %TYPE list|Yes|No %NEXT 8
+7|Please tell us what you found useful on the website and what you would change. %TYPE text
+8|Will you use the PIEL Survey again? %TYPE list|Yes|No %NEXT END|Maybe
+9|What type of questions will you use in your next survey? %TYPE checkbox|List|Checkbox|Slider|Text
+10|Do you have any more comments? %TYPE text

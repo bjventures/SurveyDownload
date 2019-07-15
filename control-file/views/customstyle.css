@@ -1,0 +1,170 @@
+@charset 'utf-8';
+@viewport {
+    width: device-width;
+    zoom: 1;
+}
+@-ms-viewport {
+    width: device-width;
+    zoom: 1;
+}
+@-o-viewport {
+    width: device-width;
+    zoom: 1;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+html {
+    position: relative;
+    font-size: 100%;
+    height:100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+body {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: white;
+    font-size: 1.1em;
+    line-height:1.25em;
+}
+h1{
+    text-align:center;
+    font-size: 1.6em;
+    line-height:1.1em;
+}
+h2{
+    font-size: 1.3em;
+    line-height:1em;
+    padding-top: 0.5em;
+}
+h3{
+    font-size: 1.1em;
+    line-height:1em;
+    padding-top: 0.2em;
+}
+.wrapper-main {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    max-width:1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: white;
+    padding: 0.5em 0.5em 2em 0.5em;
+}
+.logo {
+    position:relative;
+    background-size: contain;
+    -moz-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin:0 auto;
+    display: inline-block;
+    background-size: contain;
+    background-image:url('https://pielsurvey.org/control-file/views/logo.png');
+    width: 100%;
+    padding-bottom: 100%;
+    float: right;
+}
+.intro {
+    display: inline-block;
+    width: 100%;
+}
+.top-heading {
+    display: inline-block;
+    width: 100%
+}
+.error {
+    color: red;
+}
+
+.form-id {
+    text-align: center;
+    border: 1px solid #396bab;
+    padding:0.2em;
+    background-color: #ccffff;
+    font-size: 1em;
+    border-radius:0.2em;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.form-id p {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0;
+}
+.form-id input[type="text"]{
+    width: 80%;
+    border-radius:0.5em;
+    border: 1px solid #396bab;
+    border-radius:0.2em;
+    padding: 0.2em;
+    margin-bottom:20px;
+    margin-bottom:0.2em;
+}
+.form-id input[type="submit"] {
+    width:80%;
+    margin:0 auto;
+    border-radius:0.2em;
+    border:none;
+    margin:0.2em 0;
+    color:white;
+    background-color:#396bab;
+    font-size:1.2em;
+    color:#FFF;
+}
+.form-id input:focus {
+    outline: none;
+    background-color: #EDF6FE;
+    box-shadow: 0 0 0 0.1em #AFCDD8;
+}
+
+
+@media only screen and (min-width: 568px) {
+    .wrapper-main {
+        width: 90%;
+        padding: 0.5em;
+    }
+    .top-heading {
+        width: 45%
+    }
+    .logo {
+        width: 50%;
+        padding-bottom: 40%;
+    }
+    .intro {
+        width: 45%;
+    }
+    .form-id {
+        width:80%;
+        margin-left: 1em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: #edf0f5;
+    }
+    .wrapper-main {
+        width: 80%;
+        padding: 2em;
+    }
+    .top-heading {
+        width: 55%
+    }
+    .logo {
+
+        width: 40%;
+        padding-bottom: 40%;
+    }
+    .intro {
+        width: 55%;
+    }
+
+}
