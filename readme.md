@@ -53,4 +53,4 @@ We have set up a [working example here](https://pielsurvey.org/control-file/).
 Send a link to participants with the following structure:
 `https://{mydomain.com}/control-file/{survey file}/{id}`
 
-In our demonstration, the URL [https://pielsurvey.org/control-file/sample/testid](https://pielsurvey.org/control-file/sample/testid/) will download a sample survey with a participant id of "id".
+In our demonstration, the URL [https://pielsurvey.org/control-file/sample/testid](https://pielsurvey.org/control-file/sample/testid/) will download a sample survey with a participant id of "testid".
