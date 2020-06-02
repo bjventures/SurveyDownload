@@ -1,17 +1,19 @@
 <?php
-
 declare(strict_types=1);
 
 Class ForceDownload {
 
-    protected $downloadFile;
-    protected $stringSwaps;
+    private string $downloadFile;
+    private array $stringSwaps;
 
     function __construct(String $fileName, Array $stringSwaps) {
         $this->downloadFile = $fileName;
         $this->stringSwaps  = $stringSwaps;
     }
 
+    /**
+     * @throws Exception
+     */
     public function downloadFile() {
         if (!file_exists($this->downloadFile) || !is_file($this->downloadFile)) {
             throw new Exception;
@@ -19,19 +21,14 @@ Class ForceDownload {
         if (count($this->stringSwaps) == 0) {
             $this->sendHeaders(filesize($this->downloadFile));
             readfile($this->downloadFile);
-        }
-        else {
-            $file = file_get_contents($this->downloadFile);
-            if ($file === false) {
-                throw new Exception;
-            }
+        } else {
+            $newFileString = file_get_contents($this->downloadFile);
             foreach ($this->stringSwaps as $stringSwap) {
-                $newfile = str_replace($stringSwap->oldString, $stringSwap->newString, $file);
+                $newFileString = str_replace($stringSwap->oldString, $stringSwap->newString, $newFileString);
             }
-            $this->sendHeaders(strlen($newfile));
-            echo $newfile;
+            $this->sendHeaders(strlen($newFileString));
+            echo $newFileString;
         }
-        exit;
     }
 
     private function sendHeaders(Int $size) {
